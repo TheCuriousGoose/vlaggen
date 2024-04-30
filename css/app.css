@@ -1,0 +1,142 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+canvas,
+#south-korean-flag {
+    border: 1px solid black;
+}
+
+#south-korean-flag {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+
+    .yinyang-container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .yinyang {
+        position: relative;
+        width: 100px;
+        transform: rotate(30deg);
+        height: 50px;
+        background: #c60c30;
+        border-bottom: 50px solid #003478;
+        border-radius: 50%;
+    }
+
+    .trigram {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.3rem;
+        width: 50px;
+
+        .row {
+            display: flex;
+            gap: 0.4rem;
+        }
+    }
+
+    .top-left {
+        top: 40px;
+        left: 50px;
+        transform: rotate(-55.309deg);
+    }
+
+    .top-right {
+        top: 40px;
+        right: 50px;
+        transform: rotate(55.309deg);
+    }
+
+    .bottom-right {
+        bottom: 40px;
+        right: 50px;
+        transform: rotate(-55.309deg);
+    }
+
+    .bottom-left {
+        bottom: 40px;
+        left: 50px;
+        transform: rotate(55.309deg);
+    }
+
+    .bar {
+        background-color: black;
+        height: 6px;
+        width: 100%;
+    }
+}
+
+.yinyang::before {
+    content: "";
+    position: absolute;
+    top: 43%;
+    left: 0%;
+    width: 50px;
+    height: 50px;
+    background: #c60c30;
+    border-radius: 50%;
+}
+
+.yinyang::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: #003478;
+    border-radius: 50%;
+}
+
+#dutch-flag {
+    display: flex;
+    width: 300px;
+    height: 200px;
+
+    .column {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1 !important;
+
+        .red {
+            width: 100%;
+            height: 33.33%;
+            background-color: #AF1623;
+        }
+
+        .white {
+            width: 100%;
+            height: 33.33%;
+            background-color: white;
+        }
+
+        .blue {
+            width: 100%;
+            height: 33.33%;
+            background-color: #1B448C;
+        }
+    }
+}
+
+@keyframes upDown {
+    from {
+        transform: translateY(8px);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+}
